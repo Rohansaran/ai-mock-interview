@@ -15,6 +15,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 print("OPENROUTER:", os.getenv("OPENROUTER_API_KEY"))
+import os
+
+os.makedirs("uploads", exist_ok=True)
+
 app = FastAPI()
 
 from fastapi.middleware.cors import CORSMiddleware
