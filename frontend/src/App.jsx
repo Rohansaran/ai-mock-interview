@@ -237,7 +237,7 @@ useEffect(() => {
     setLoadingQuestion(true);
 
     const response = await axios.post(
-      "http://127.0.0.1:8000/generate-question",
+      "https://ai-mock-interview-9s7a.onrender.com/generate-question",
       {
         domain,
       }
@@ -272,7 +272,7 @@ const submitAnswer = async () => {
     setLoadingEvaluation(true);
 
     const response = await axios.post(
-      "http://127.0.0.1:8000/final-score",
+      "https://ai-mock-interview-9s7a.onrender.com/final-score",
       {
         question,
         answer,
@@ -684,7 +684,7 @@ const uploadRecording = async () => {
   try {
     const response =
       await axios.post(
-        "http://127.0.0.1:8000/upload-video",
+        "https://ai-mock-interview-9s7a.onrender.com/upload-video",
         formData,
         {
           headers: {
@@ -714,7 +714,7 @@ const fetchVideos = async () => {
   try {
     const response =
       await axios.get(
-        "http://127.0.0.1:8000/videos"
+        "https://ai-mock-interview-9s7a.onrender.com/videos"
       );
 
     setVideos(
@@ -1020,7 +1020,7 @@ const fetchVideos = async () => {
           <video
             controls
             width="100%"
-            src={`http://127.0.0.1:8000/uploads/${video}`}
+            src={`https://ai-mock-interview-9s7a.onrender.com/uploads/${video}`}
           />
 
           <p>
